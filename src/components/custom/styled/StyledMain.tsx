@@ -19,6 +19,7 @@ export default function Main({
     ...(open && {
       marginLeft: 0,
     }),
+    padding: theme.spacing(0, 1),
   }));
 
   return <StyledMain open={drawerOpen}>{children}</StyledMain>;
