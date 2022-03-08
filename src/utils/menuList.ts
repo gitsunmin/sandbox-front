@@ -1,12 +1,12 @@
 import { nanoid } from "nanoid";
 
 export enum MenuName {
-  GRID_SAMPLE = "Grid Sample",
+  USER_DATA = "사용자 데이터",
   SAND_BOX = "놀이공간",
 }
 
 export enum MenuURL {
-  GRID_SAMPLE = "/gridSample",
+  USER_DATA = "/userData",
   SAND_BOX = "/sandbox",
 }
 
@@ -17,8 +17,8 @@ const menuList: Menu[] = [
     children: [
       {
         id: nanoid(),
-        name: MenuName.GRID_SAMPLE,
-        to: MenuURL.GRID_SAMPLE,
+        name: MenuName.USER_DATA,
+        to: MenuURL.USER_DATA,
       },
     ],
   },

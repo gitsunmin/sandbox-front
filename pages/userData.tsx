@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import TopLayer from "@src/components/menus/gridSample/TopLayer";
-import SearchLayer from "@src/components/menus/gridSample/SearchLayer";
+import SearchLayer from "@src/components/menus/gridSample/ActionLayer";
 import RowsLayer from "@src/components/menus/gridSample/RowsLayer";
 
 
-const GridSamplePage: NextPage = () => {
+const UserDataPage: NextPage = () => {
     return <>
         <TopLayer />
         <SearchLayer />
@@ -12,4 +12,4 @@ const GridSamplePage: NextPage = () => {
     </>;
 };
 
-export default GridSamplePage;
+export default UserDataPage;

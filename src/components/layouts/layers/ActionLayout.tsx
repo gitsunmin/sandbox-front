@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
 import { Box } from "@mui/material";
 
-interface SearchLayoutProps {
+interface ActionLayoutProps {
   children: JSX.Element | JSX.Element[] | string;
 }
 
-const SearchLayout: NextPage<SearchLayoutProps> = ({ children }) => {
+const ActionLayout: NextPage<ActionLayoutProps> = ({ children }) => {
   return <Box>
     {children}
   </Box>;
 };
 
-export default SearchLayout;
+export default ActionLayout;

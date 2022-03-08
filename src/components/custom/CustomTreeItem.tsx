@@ -5,6 +5,8 @@ import TreeItem, {
   TreeItemProps,
   TreeItemContentProps,
 } from "@mui/lab/TreeItem";
+import Box from '@mui/material/Box';
+import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 
 /**
@@ -15,6 +17,14 @@ interface CustomPropsType {
   to?: string;
 }
 
+const TreeItemContents = styled("div")(({ theme }) => ({
+  padding: theme.spacing(0, 1),
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  fontSize: '2rem',
+}));
+
 /**
  * * Tree에 content를 편하게 수정하기 위해서 MUI의 TreeItem을 커스텀 wrapping하여 만들었음
  */
@@ -24,8 +34,11 @@ const CustomContent = ({ to }: CustomPropsType) => {
     ref
   ) {
     const router = useRouter();
+    const { route } = router;
     const componentProps = props as TreeItemContentProps;
     const { nodeId } = componentProps;
+
+    const isSelectedLink = route === to;
 
     /**
      * @link http://react-material.fusetheme.com/documentation/material-ui-components/tree-view
@@ -36,20 +49,29 @@ const CustomContent = ({ to }: CustomPropsType) => {
       handleExpansion(event);
       to && router.push(to);
     };
+
     return (
-      <div
+      <Box
         ref={ref as React.Ref<HTMLDivElement>}
+        sx={{
+          color: isSelectedLink ? 'primary.main' : 'black',
+          fontWeight: isSelectedLink ? 'bold' : '',
+          '&:hover': {
+            opacity: 0.7,
+            cursor: 'pointer',
+          },
+        }}
         onClick={handleExpansionClick}
       >
         {props.label}
-      </div>
+      </Box>
     );
   });
 };
 
 const CustomTreeItem = (props: TreeItemContentProps | CustomPropsType) => {
   const treeItemProps = props as TreeItemProps;
-  const customAttributes = { to: props.to };
+  const customAttributes = { to: (props as CustomPropsType).to };
   return (
     <TreeItem
       ContentComponent={CustomContent(customAttributes)}

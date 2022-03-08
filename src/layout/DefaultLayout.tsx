@@ -1,6 +1,6 @@
 import React, { useState, forwardRef } from "react";
 import { useRouter } from "next/router";
-import { styled, useTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -9,17 +9,17 @@ import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import CustomTreeItem from "../components/custom/CustomTreeItem";
 import StyledMain from "../components/custom/styled/StyledMain";
-import MENU_LIST from "./menuList";
+import MENU_LIST from "../utils/menuList";
 
 const drawerWidth = 240;
 
 const DrawerHeader = styled("div")(({ theme }) => ({
+  padding: theme.spacing(0, 1),
   display: "flex",
   alignItems: "center",
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
   justifyContent: "flex-start",
+  fontSize: '2rem',
+  fontWeight: 'bold',
 }));
 
 export default function DefaultLayout({ children }: { children: any }) {
@@ -56,12 +56,19 @@ export default function DefaultLayout({ children }: { children: any }) {
         anchor="left"
         open={open}
       >
-        <DrawerHeader>React & Next Sample Page</DrawerHeader>
+        <DrawerHeader>
+          Sandbox
+        </DrawerHeader>
         <Divider />
 
         <TreeView
-          aria-label="rich object"
-          sx={{ height: 110, flexGrow: 1, maxWidth: 400, overflowY: "auto" }}
+          sx={{
+            height: 110,
+            flexGrow: 1,
+            maxWidth: 400,
+            overflowY: "auto",
+            margin: 1,
+          }}
         >
           {MENU_LIST.map((node) => renderTree(node))}
         </TreeView>

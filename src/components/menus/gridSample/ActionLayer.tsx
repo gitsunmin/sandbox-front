@@ -1,13 +1,13 @@
 import { Box } from "@mui/material";
-import SearchLayout from "@src/components/layouts/layers/SearchLayout";
+import ActionLayout from "@src/components/layouts/layers/ActionLayout";
 import NormalButton from "@UIComponent/formUI/NormalButton";
 
 const SearchLayer = () => {
   return (
-    <SearchLayout>
+    <ActionLayout>
       <NormalButton>검색</NormalButton>
       <NormalButton>초기화</NormalButton>
-    </SearchLayout>
+    </ActionLayout>
   );
 };
 
