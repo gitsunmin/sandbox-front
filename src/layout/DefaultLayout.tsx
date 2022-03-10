@@ -9,7 +9,7 @@ import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import CustomTreeItem from "../components/custom/CustomTreeItem";
 import StyledMain from "../components/custom/styled/StyledMain";
-import MENU_LIST from "../utils/menuList";
+import MENU_LIST from "../config/menuList";
 
 const drawerWidth = 240;
 
