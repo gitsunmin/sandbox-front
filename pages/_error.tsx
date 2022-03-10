@@ -1,5 +1,5 @@
+import type { NextPage } from 'next';
 import { ErrorProps } from "next/error";
-import { NextPage } from 'next';
 
 
 const ErrorPage: NextPage<ErrorProps> = ({ statusCode }) => {

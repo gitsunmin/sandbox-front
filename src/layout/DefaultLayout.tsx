@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import CssBaseline from "@mui/material/CssBaseline";
 import TreeView from "@mui/lab/TreeView";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
@@ -42,7 +41,6 @@ export default function DefaultLayout({ children }: { children: any }) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <CssBaseline />
       <Drawer
         sx={{
           width: drawerWidth,

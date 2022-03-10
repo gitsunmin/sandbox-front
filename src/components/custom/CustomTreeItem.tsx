@@ -6,7 +6,6 @@ import TreeItem, {
   TreeItemContentProps,
 } from "@mui/lab/TreeItem";
 import Box from '@mui/material/Box';
-import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 
 /**
@@ -16,14 +15,6 @@ import Typography from "@mui/material/Typography";
 interface CustomPropsType {
   to?: string;
 }
-
-const TreeItemContents = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 1),
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-start",
-  fontSize: '2rem',
-}));
 
 /**
  * * Tree에 content를 편하게 수정하기 위해서 MUI의 TreeItem을 커스텀 wrapping하여 만들었음

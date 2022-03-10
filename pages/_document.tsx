@@ -1,8 +1,8 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
-export default function Document() {
+export default function DocumentPage() {
   return (
-    <Html lang='ko'>
+    <Html lang="ko">
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,5 +12,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
