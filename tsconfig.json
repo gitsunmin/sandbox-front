@@ -19,7 +19,8 @@
     "paths": {
       "@src/*": ["src/*"],
       "@styles/*": ["styles/*"],
-      "@UIComponent/*": ["src/components/UIComponent/*"]
+      "@UIComponent/*": ["src/components/UIComponent/*"],
+      "@public/*": ["public/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

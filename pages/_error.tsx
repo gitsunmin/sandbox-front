@@ -1,9 +1,7 @@
 import type { NextPage } from 'next';
 import { ErrorProps } from "next/error";
 
-
 const ErrorPage: NextPage<ErrorProps> = ({ statusCode }) => {
-    console.log('statusCode::', statusCode);
     return (
       <p>
         {statusCode
